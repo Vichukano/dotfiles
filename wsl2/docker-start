@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo prepare-hosts
+sudo service docker start
