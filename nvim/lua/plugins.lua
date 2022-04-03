@@ -44,8 +44,6 @@ return require('packer').startup(function()
 
     -- РАЗНОЕ
     -----------------------------------------------------------
-    -- 'Автоформатирование' кода для всех языков
-    use 'Chiel92/vim-autoformat'
     -- Считает кол-во совпадений при поиске
     use 'google/vim-searchindex'
     -- Стартовая страница, если просто набрать vim в консоле
@@ -61,4 +59,7 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/vim-vsnip'
     use 'simrat39/rust-tools.nvim'
+
+    -- Rust
+    use 'rust-lang/rust.vim'
 end)
