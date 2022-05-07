@@ -50,6 +50,11 @@ return require('packer').startup(function()
 	      timout = 50, }
         end,
         }
+    -- Терминал
+    use {
+        "akinsho/toggleterm.nvim",
+        config = function() require('toggleterm-config').config() end
+        }
     -- РАЗНОЕ
     -----------------------------------------------------------
     -- Стартовая страница, если просто набрать vim в консоле
@@ -57,7 +62,7 @@ return require('packer').startup(function()
     -- LSP, подсветка синтаксиса, автодополнение, навигация
     use {
         'neovim/nvim-lspconfig',
-        config = function() require('lspconfig') end
+        config = function() require('lspconf') end
     }
     use {
         'hrsh7th/nvim-cmp',
@@ -69,7 +74,7 @@ return require('packer').startup(function()
     use 'simrat39/rust-tools.nvim'
     use {
         'nvim-treesitter/nvim-treesitter',
-        config = function() require('treesitter') end,
+        config = function() require('treesitter').config() end,
         run = ':TSUpdate'
     }
 end)

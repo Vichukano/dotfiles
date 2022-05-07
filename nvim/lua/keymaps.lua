@@ -13,6 +13,7 @@ map('', '<left>', ':echoe "Use h"<CR>', {noremap = true, silent = false})
 map('', '<right>', ':echoe "Use l"<CR>', {noremap = true, silent = false})
 -- Включить/отключить специальные символы
 map('n', '<leader>lc', '<cmd>set list!<CR>', default_opts)
+map('n', '<C-s>', '<cmd>w<CR>', default_opts)
 -- Перемещение в режиме редактирования
 map('i', '<C-h>', '<left>', default_opts)
 map('i', '<C-j>', '<down>', default_opts)
@@ -50,3 +51,4 @@ map('n', 'gi', [[ <cmd>lua vim.lsp.buf.implementation()<CR> ]],default_opts)
 map('n', 'gr', [[ <cmd>lua vim.lsp.buf.references()<CR> ]], default_opts)
 map('n', '<leader>la', [[ <cmd>lua vim.lsp.buf.code_action()<CR> ]], default_opts)
 map('n', '<leader>lf', [[ <cmd>lua vim.lsp.buf.formatting()<CR> ]], default_opts)
+map('n', '<leader>lr', [[ <cmd>lua vim.lsp.buf.rename()<CR> ]], default_opts)
